@@ -210,7 +210,7 @@ function removeCompleted() {
 }
 
 .toggle-all + label {
-  width: 60px;
+  min-width: 60px;
   height: 34px;
   font-size: 0;
   position: absolute;
@@ -345,9 +345,11 @@ function removeCompleted() {
 }
 
 .todo-footer {
+  display: flex;
+  justify-content: space-between;
   color: #777;
   padding: 10px 15px;
-  height: 40px;
+  min-height: 40px;
   text-align: center;
   border-top: 1px solid #e6e6e6;
 }
@@ -358,14 +360,12 @@ function removeCompleted() {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 50px;
+  height: 100%;
   overflow: hidden;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
 }
 
 .todo-count {
-  float: left;
-  text-align: left;
 }
 
 .todo-count strong {
@@ -376,9 +376,7 @@ function removeCompleted() {
   margin: 0;
   padding: 0;
   list-style: none;
-  position: absolute;
-  right: 0;
-  left: 0;
+  flex: 1;
 }
 
 .filters li {
@@ -406,7 +404,6 @@ function removeCompleted() {
 
 .clear-completed,
 html .clear-completed:active {
-  float: right;
   position: relative;
   line-height: 20px;
   text-decoration: none;
@@ -434,11 +431,17 @@ html .clear-completed:active {
 
 @media (max-width: 430px) {
   .todo-footer {
-    height: 50px;
+    flex-direction: column;
   }
 
   .filters {
-    bottom: 10px;
+    margin: 10px auto;
+  }
+
+  .new-todo,
+  .edit,
+  .todo-list li {
+    font-size: 18px;
   }
 }
 </style>
