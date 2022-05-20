@@ -1,0 +1,14 @@
+{
+  "version": "2.0",
+  "envId": "babel-station-3gs0ratl7362273e",
+  "functionRoot": "./cloudfunctions",
+  "functions": [
+    {
+      "name": "test-todo",
+      "timeout": 30,
+      "runtime": "Nodejs12.16",
+      "installDependency": true,
+      "handler": "index.main"
+    }
+  ]
+}
